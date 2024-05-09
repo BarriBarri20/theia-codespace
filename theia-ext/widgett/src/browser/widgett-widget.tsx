@@ -20,7 +20,7 @@ export class WidgettWidget extends ReactWidget {
         this.doInit()
     }
 
-    protected async doInit(): Promise <void> {
+    protected async doInit(): Promise<void> {
         this.id = WidgettWidget.ID;
         this.title.label = WidgettWidget.LABEL;
         this.title.caption = WidgettWidget.LABEL;
@@ -30,39 +30,41 @@ export class WidgettWidget extends ReactWidget {
     }
 
     render(): React.ReactElement {
-        
+
         // const header = `This is a sample wwwwidget which simply calls the messageService
         // in order to display an info message to end users.`;
         return <div id='widget-container'>
             {/* <AlertMessage type='INFO' header={header} /> */}
             <button id='displayMessageButton' className='theia-button secondary' title='Display Message' onClick={_a => this.displayMessage()}>Display Message</button>
-                <JitsiMeeting
-                        roomName = "PleaseUseAGoodRoomName"
-                        configOverwrite = {{
-                            startWithAudioMuted: true,
-                            disableModeratorIndicator: true,
-                            enableEmailInStats: false
-                        }}
-                        interfaceConfigOverwrite = {{
-                            DISABLE_JOIN_LEAVE_NOTIFICATIONS: true
-                        }}
-                        userInfo = {{
-                            email: 'hellp@ee.com',
-                            displayName: 'YOUR_USERNAME'
-                        }}
-                        onApiReady = { (externalApi) => {
-                            // here you can attach custom event listeners to the Jitsi Meet External API
-                            // you can also store it locally to execute commands
-                        } }
-                        getIFrameRef = { (iframeRef) => { iframeRef.style.height = '650px'; } }
-                    />
-                </div>
-            }
+            <JitsiMeeting
+                roomName="PleaseUseAGoodRoomName"
+                configOverwrite={{
+                    startWithAudioMuted: true,
+                    disableModeratorIndicator: true,
+                    enableEmailInStats: false
+                }}
+                interfaceConfigOverwrite={{
+                    DISABLE_JOIN_LEAVE_NOTIFICATIONS: true
+                }}
+                userInfo={{
+                    email: 'hellp@ee.com',
+                    displayName: 'YOUR_USERNAME'
+                }}
+                onApiReady={(externalApi) => {
+                    // here you can attach custom event listeners to the Jitsi Meet External API
+                    // you can also store it locally to execute commands
+                }}
+                getIFrameRef={(iframeRef) => {
+                    iframeRef.style.height = '100vh';
+                }}
+            />
+        </div>
+    }
 
-            protected displayMessage(): void {
+    protected displayMessage(): void {
 
-                this.messageService.info('Congratulations: Widgett Widget Successfully Created!');
-            }
+        this.messageService.info('Congratulations: Widgett Widget Successfully Created!');
+    }
 
     protected onActivateRequest(msg: Message): void {
         super.onActivateRequest(msg);
