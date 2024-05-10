@@ -1,0 +1,24 @@
+{
+  "name": "open-collaboration-rpc",
+  "version": "0.0.5",
+  "description": "Open Collaboration RPC Implementation",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "keywords": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TypeFox/open-collaboration-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TypeFox/open-collaboration-server/issues"
+  },
+  "homepage": "https://github.com/TypeFox/open-collaboration-server"
+}
