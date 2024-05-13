@@ -199,6 +199,9 @@
       "path": "packages/vsx-registry"
     },
     {
+      "path": "packages/widgett"
+    },
+    {
       "path": "packages/workspace"
     }
   ]

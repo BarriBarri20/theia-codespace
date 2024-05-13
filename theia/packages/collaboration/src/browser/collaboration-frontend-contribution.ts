@@ -53,7 +53,7 @@ export const COLLABORATION_STATUS_BAR_ID = 'statusBar.collaboration';
 
 export const COLLABORATION_AUTH_TOKEN = 'THEIA_COLLAB_AUTH_TOKEN';
 export const COLLABORATION_SERVER_URL = 'COLLABORATION_SERVER_URL';
-export const DEFAULT_COLLABORATION_SERVER_URL = 'http://localhost:8100';
+export const DEFAULT_COLLABORATION_SERVER_URL = 'https://8100-barribarri2-theiacodesp-0jtqkeemhov.ws-eu111.gitpod.io';
 
 @injectable()
 export class CollaborationFrontendContribution implements CommandContribution {
